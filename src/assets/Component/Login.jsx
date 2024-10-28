@@ -5,45 +5,42 @@ import { useForm } from "react-hook-form"
 
 
 const Login = () => {
-const {signinUser}=useContext(AuthContext);
+    const { signinUser } = useContext(AuthContext);
 
-    
+
     const {
-      register,
-      handleSubmit,
-      watch,
-      formState: { errors },
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
     } = useForm()
-  
+
     // const onSubmit = (data) => console.log(data)
-  
+
     // console.log(watch("example"));
     const onSubmit = data => {
-        const {email,password}=data;
-      
-        signinUser(email,password)
-        .then(result=>{
-            console.log(result)
-        })
+        const { email, password } = data;
+
+        signinUser(email, password)
+            .then(result => {
+                console.log(result)
+            })
     }
 
     return (
         <div>
-           <from onSubmit={handleSubmit(onSubmit)}>
-           <label className="input input-bordered flex items-center gap-2">
-                Email
-                <input type="text"  {...register("example")} {...register("exampleRequired", { required: true })} className="grow" placeholder="Email" />
-                {errors.exampleRequired && <span>This field is required</span>}
-            </label>
-           <label className="input input-bordered flex items-center gap-2">
-                Password
-                <input type="password"  {...register("example")} {...register("exampleRequired", { required: true })}  className="grow" placeholder="password" />
-                {errors.exampleRequired && <span>This field is required</span>}
-            </label>
-            
-            <button className="btn btn-success">Success</button>
-           
-           </from>
+           <form onSubmit={handleSubmit(onSubmit)}>
+               
+               <input placeholder="Your Email" {...register("Email","exampleRequired",{ required: true })} />
+               {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
+              
+               <input placeholder="Your Password" {...register("exampleRequired", { required: true })} />
+               
+               {errors.exampleRequired && <span className="text-red-600">This field is required</span>}
+
+               <button className="btn btn-success">Success</button>
+
+           </form>
         </div>
     );
 };

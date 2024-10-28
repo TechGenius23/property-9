@@ -21,7 +21,7 @@ const Home = () => {
             },
             </div>
             <Ourproject></Ourproject>,
-            <div className="grid grid-cols-4">
+            <div className="flex">
             {
                 projects.slice(0,2).map(project=><Ourproject key={project.id} projectdata={project}></Ourproject>)
             },
