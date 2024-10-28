@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Luxury Villa",
+        "segment_name": "High-end",
+        "description": "A luxurious villa with breathtaking sea views, spacious rooms, and modern amenities.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "Beverly Hills, CA",
+        "facilities": ["Living room", "Swimming pool", "Kitchen", "Garden"],
+        "image": "https://i.ibb.co/3hkh59S/f3.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Urban Apartment",
+        "segment_name": "Mid-range",
+        "description": "A stylish apartment in the heart of the city, close to all amenities and public transportation.",
+        "price": "$450,000",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "New York, NY",
+        "facilities": ["Living room", "Gym", "Concierge service"],
+        "image": "https://i.ibb.co/fDWdF5Y/apartment.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Countryside Cottage",
+        "segment_name": "Mid-range",
+        "description": "A charming cottage located in the countryside with a spacious garden and scenic views.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "Napa Valley, CA",
+        "facilities": ["Living room", "Fireplace", "Garden", "Garage"],
+        "image": "https://i.ibb.co/LNZXmdW/cottage.jpg"
+    }
+    ]

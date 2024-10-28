@@ -1,0 +1,112 @@
+
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Villa",
+      "segment_name": "High-end",
+      "description": "A luxurious villa with breathtaking sea views, spacious rooms, and modern amenities.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Beverly Hills, CA",
+      "facilities": ["Living room", "Swimming pool", "Kitchen", "Garden"],
+      "image": "https://i.ibb.co.com/3hkh59S/f3.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Cottage",
+      "segment_name": "Mid-range",
+      "description": "A cozy cottage surrounded by nature, ideal for families looking for peace and quiet.",
+      "price": "$450,000",
+      "status": "sale",
+      "area": "1500 sq ft",
+      "location": "Asheville, NC",
+      "facilities": ["Living room", "Fireplace", "Kitchen", "Garage"],
+      "image": "https://i.ibb.co.com/GsLZZq8/R.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Apartment",
+      "segment_name": "Urban",
+      "description": "A modern apartment in the heart of the city with all necessary amenities within walking distance.",
+      "price": "$3,000/month",
+      "status": "rent",
+      "area": "900 sq ft",
+      "location": "New York, NY",
+      "facilities": ["Living room", "Gym", "Kitchen", "Rooftop access"],
+      "image": "https://i.ibb.co.com/z8VPGs1/OIP.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Spacious Family Home",
+      "segment_name": "Suburban",
+      "description": "A spacious family home with a large backyard and nearby schools, perfect for growing families.",
+      "price": "$800,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Austin, TX",
+      "facilities": ["Living room", "Swimming pool", "Kitchen", "Home office"],
+      "image": "https://i.ibb.co.com/yBt0VZK/OIP-1.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Beachside Bungalow",
+      "segment_name": "Vacation",
+      "description": "A charming bungalow located steps away from the beach, ideal for vacation getaways.",
+      "price": "$2,500/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "Malibu, CA",
+      "facilities": ["Living room", "Deck", "Kitchen", "Beach access"],
+      "image": "https://i.ibb.co.com/0FkRzYt/R-1.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Mountain Retreat",
+      "segment_name": "Luxury",
+      "description": "An isolated retreat in the mountains with stunning views and private hiking trails.",
+      "price": "$950,000",
+      "status": "sale",
+      "area": "2800 sq ft",
+      "location": "Aspen, CO",
+      "facilities": ["Living room", "Fireplace", "Kitchen", "Private hiking trail"],
+      "image": "https://i.ibb.co.com/5645qjh/R-2.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Penthouse Suite",
+      "segment_name": "High-end",
+      "description": "A lavish penthouse suite with panoramic city views and luxury finishes.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Miami, FL",
+      "facilities": ["Living room", "Swimming pool", "Kitchen", "Home theater"],
+      "image": "https://i.ibb.co.com/xMK9Yng/panorama-penthouse-bureau-fraai-8.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Downtown Loft",
+      "segment_name": "Urban",
+      "description": "A modern loft with an open floor plan, located in a bustling downtown district.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "Chicago, IL",
+      "facilities": ["Living room", "Gym", "Kitchen", "Rooftop lounge"],
+      "image": "https://i.ibb.co.com/h97D6Xv/OIP-2.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Country Farmhouse",
+      "segment_name": "Rural",
+      "description": "A spacious farmhouse with sprawling land, perfect for peaceful country living.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "3500 sq ft",
+      "location": "Nashville, TN",
+      "facilities": ["Living room", "Barn", "Kitchen", "Garden"],
+      "image": "https://i.ibb.co.com/MCd9c3s/OIP-3.jpg"
+    }
+  ]
+
