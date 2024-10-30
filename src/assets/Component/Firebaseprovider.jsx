@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 import {createContext } from "react";
-import { getAuth } from "firebase/auth";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-// import { appendErrors } from "react-hook-form";
 import app from "./Firebase.config";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+
  export const AuthContext = createContext(null)
 
 
 const Firebaseprovider = ({children}) => {
-  const auth = getAuth(app);
-
+  const auth=getAuth(app)
+console.log(app);
   //creat user
   const creatUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password)
