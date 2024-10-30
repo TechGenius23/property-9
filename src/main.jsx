@@ -14,11 +14,13 @@ import Singlestate from './assets/Component/Singlestate';
 import Login from './assets/Component/Login';
 import Register from './assets/Component/Register';
 import Firebaseprovider from './assets/Component/Firebaseprovider';
+import Error from './assets/Component/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    errorElement:<Error></Error>,
     children:[
    
      {

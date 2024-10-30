@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 // import { appendErrors } from "react-hook-form";
 import app from "./Firebase.config";
- export const AuthContext = createContext()
+ export const AuthContext = createContext(null)
 
 
 const Firebaseprovider = ({children}) => {
@@ -14,12 +14,13 @@ const Firebaseprovider = ({children}) => {
   //creat user
   const creatUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password)
+   
   };
 
 
   //sign in user
   const signinUser = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password);
+   return signInWithEmailAndPassword(auth, email, password);
   };
 
   const allvalue={
