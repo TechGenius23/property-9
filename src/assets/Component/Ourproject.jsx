@@ -1,25 +1,34 @@
+/* eslint-disable react/prop-types */
 import { NavLink, } from "react-router-dom";
 
 
-const Ourproject = (projectdata={}) => {
-    console.log(projectdata);
-    const {estate_title,segment_name } = projectdata;
+const Ourproject = ({projectdata={}}) => {
+   
+    const {estate_title,segment_name,image,price,status,area,location,facilities,description } = projectdata;
     return (
         <div>
             <NavLink to={'/ourproject'}></NavLink>
             <div className="card bg-base-100 w-96 shadow-xl">
+            
                 <figure>
                     <img
-                        src={''}
+                        src={image}
                         alt="Shoes" />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>{estate_title}</p>
+                    <h2 className="card-title">{estate_title}</h2>
                     <p>{segment_name}</p>
+                    <p>{price}</p>
+                    <p>{status}</p>
+                    <p>{area}</p>
+                    <p>{location}</p>
+                    <p>{facilities}</p>
+                    <p>{description}</p>
                     
                 </div>
+                
             </div>
+            
         </div>
     );
 };

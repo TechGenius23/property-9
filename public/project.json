@@ -21,7 +21,7 @@
         "area": "1200 sq ft",
         "location": "New York, NY",
         "facilities": ["Living room", "Gym", "Concierge service"],
-        "image": "https://i.ibb.co/fDWdF5Y/apartment.jpg"
+        "image": "https://i.ibb.co.com/6yDFGKH/OIP.jpg"
     },
     {
         "id": 3,
@@ -33,6 +33,6 @@
         "area": "1800 sq ft",
         "location": "Napa Valley, CA",
         "facilities": ["Living room", "Fireplace", "Garden", "Garage"],
-        "image": "https://i.ibb.co/LNZXmdW/cottage.jpg"
+        "image": "https://i.ibb.co.com/NSBXT9S/R-3.jpg"
     }
     ]

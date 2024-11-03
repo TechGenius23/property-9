@@ -1,0 +1,33 @@
+[
+    {
+      "reviewerName": "John Doe",
+      "jobTitle": "Software Engineer",
+      "review": "The property exceeded my expectations. The buying process was smooth, and the amenities are well-maintained. I would definitely recommend this to anyone looking for a modern, comfortable space."
+    },
+    {
+      "reviewerName": "Sarah Smith",
+      "jobTitle": "Marketing Specialist",
+      "review": "This property is fantastic! The environment is serene, and it feels like a real escape from the city. The team made the buying process hassle-free. Highly recommended!"
+    },
+    {
+      "reviewerName": "David Brown",
+      "jobTitle": "Real Estate Investor",
+      "review": "One of the best properties I've invested in. It has a prime location and excellent growth potential. The management team was transparent and efficient throughout the entire process."
+    },
+    {
+      "reviewerName": "Emily Johnson",
+      "jobTitle": "Architect",
+      "review": "As an architect, I was impressed with the design and layout of this property. It's well-planned with a perfect blend of aesthetics and functionality. Definitely worth the investment!"
+    },
+    {
+      "reviewerName": "Michael Williams",
+      "jobTitle": "Financial Analyst",
+      "review": "I’m very happy with my decision to buy here. The property is worth every penny, with high potential for future value. Excellent facilities and responsive management."
+    },
+    {
+      "reviewerName": "Linda Clark",
+      "jobTitle": "Interior Designer",
+      "review": "Beautifully designed interiors and a great atmosphere. The property feels luxurious yet homey. The purchase process was seamless, thanks to the helpful team!"
+    }
+  ]
+  

@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -26,8 +27,22 @@ const router = createBrowserRouter([
      {
       path:'/home',
       element:<Home></Home>,
-      loader:()=>fetch('Data.json'),
-     
+      // loader:()=>fetch('Data.json'),
+      // loader:()=>fetch('project.json')
+      loader: async () => {
+        const dataResponse = await fetch('Data.json');
+        const projectResponse = await fetch('project.json');
+        // const review = await fetch('review.json');
+        const review= await fetch('review.json');
+        
+        // Assuming both are JSON responses
+        const data = await dataResponse.json();
+        const project = await projectResponse.json();
+        const Reviews=await review.json()
+        // const revieww = await review.json();
+    
+        return { data, project,Reviews }; // Return both data sources
+      },
      },
      {
       path:'/home/:id',
@@ -38,7 +53,7 @@ const router = createBrowserRouter([
      {
       path:'/ourproject',
       element:<Ourproject></Ourproject>,
-      loader:()=>fetch('project.json')
+      
      },
      {
      path:'/review',
