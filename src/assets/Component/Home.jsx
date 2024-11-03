@@ -5,7 +5,8 @@ import Estates from "./Estates";
 import Ourproject from "./Ourproject";
 import Review from './Review';
 import Slider from "./Slider";
-
+import React from "react";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -16,7 +17,9 @@ const Home = () => {
     console.log(data, project, Reviews);
     return (
         <div>
-
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <Slider></Slider>,
             <Estates></Estates>,
             <div className='grid grid-cols-3 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-5'>
@@ -39,6 +42,7 @@ const Home = () => {
                 },
 
             </div>
+
         </div>
     );
 };

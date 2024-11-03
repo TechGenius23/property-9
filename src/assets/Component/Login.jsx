@@ -2,78 +2,83 @@
 import { useContext, useState } from "react";
 import authentication, { AuthContext } from './Firebaseprovider'
 import { Link, useNavigate } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 
 
 
 const Login = () => {
-    const { signinUser, updateUser } = useContext(AuthContext);
-    const navigate = useNavigate();
-    const [error, setError] = useState("");
-    const [showPassword, setshowPassword] = useState(false);
-  
-    const handleCreateUser = (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value;
-      const email = form.email.value;
-      const password = form.password.value;
-      const photoURl = form.photoURL.value;
-  
-      if (password.length < 6) {
-        setError("Password must be six characters long or more");
-        return;
-      }
-      if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
-        setError("Password should contain at least one Special character");
-        return;
-      }
-      if (!/(?=.*?[A-Z])/.test(password)) {
-        setError("Password should contain at least one Capital character");
-        return;
-      }
-  
-      signinUser(email, password)
-        .then((userCredential) => {
-          // Signed up
-          const user = userCredential.user;
+  const { signinUser, updateUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [showPassword, setshowPassword] = useState(false);
+
+  const handleCreateUser = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photoURl = form.photoURL.value;
+
+    if (password.length < 6) {
+      setError("Password must be six characters long or more");
+      return;
+    }
+    if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+      setError("Password should contain at least one Special character");
+      return;
+    }
+    if (!/(?=.*?[A-Z])/.test(password)) {
+      setError("Password should contain at least one Capital character");
+      return;
+    }
+
+    signinUser(email, password)
+      .then((userCredential) => {
+        // Signed up
+        const user = userCredential.user;
+        // ...
+        if (user) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Account is Created",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          handleUpdateUser(name, photoURl);
+          navigate("/");
+          form.reset();
+        }
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage);
+        // ..
+      });
+    const handleUpdateUser = (name, photo) => {
+      const profile = {
+        displayName: name,
+        photoURL: photo,
+      };
+      updateUser(profile)
+        .then(() => {
+          // Profile updated!
           // ...
-          if (user) {
-            Swal.fire({
-              position: "top-center",
-              icon: "success",
-              title: "Account is Created",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-            handleUpdateUser(name, photoURl);
-            navigate("/");
-            form.reset();
-          }
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          setError(errorMessage);
-          // ..
+          // An error occurred
+          // ...
         });
-      const handleUpdateUser = (name, photo) => {
-        const profile = {
-          displayName: name,
-          photoURL: photo,
-        };
-        updateUser(profile)
-          .then(() => {
-            // Profile updated!
-            // ...
-          })
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
-      };
     };
-    return (
+  };
+  return (
+
+    <div>
+      <Helmet>
+        <title>Log In</title>
+      </Helmet>
       <div className="card lg:shadow-2xl bg-base-100 my-5 lg:w-6/12 mx-auto px-10 py-8">
         <h1 className="font-bold text-3xl mb-5 text-center">
           Create New Account
@@ -131,7 +136,7 @@ const Login = () => {
               onClick={() => setshowPassword(!showPassword)}
               className=" cursor-pointer absolute right-5 top-12 text-2xl"
             >
-              
+
             </span>
             <label className="label">
               <p>
@@ -168,7 +173,8 @@ const Login = () => {
           </Link>
         </div>
       </div>
-    );
-  };
-  
-  export  default Login;
+    </div>
+  );
+};
+
+export default Login;

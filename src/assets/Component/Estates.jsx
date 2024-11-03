@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 
 
 const Estates = ({ data = {} }) => {
@@ -10,7 +10,9 @@ const Estates = ({ data = {} }) => {
 
     return (
 
+        
         <Link to={`/home/${data.id}`}>
+             
             <div className="card bg-base-100 w-96 shadow-xl ">
                 <figure className="px-10 pt-10">
                     <img
